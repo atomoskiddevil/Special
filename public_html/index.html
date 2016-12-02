@@ -41,6 +41,21 @@
     </div> 
 
     <script type="text/javascript">
+
+
+    	function isNumberic(param){
+			$.each(param, function(index, value){
+
+				if( !$.isNumeric(value)){
+					alert (typeof(value))
+
+					return false;
+
+				}
+				return true;
+			});
+    	}
+
         function result(){
             var resultText ="" ;
             var side1 = parseInt($('#side1').val()) ;
@@ -49,7 +64,10 @@
 
             var sides  = [side1,side2,side3];
 
-            if ( isTriangle(sides)){
+            if( isNumberic(sides) == false ){
+            	alert("Something is wrong");
+            }
+            else if ( isTriangle(sides)){
                 sides = sides.sort(function(a, b){return a-b}) ;
                 var longest = sides.pop() ;
 
@@ -65,7 +83,8 @@
                 else{
                     resultText = "Scalene triangle" ;
                 }
-            }else{
+            }
+            else{
                 resultText = "No Triangle" ;  
 
             }

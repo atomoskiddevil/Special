@@ -61,11 +61,13 @@
 			$.each(param, function(index, value){
 
 				if( !$.isNumeric(value)){
-					alert (typeof(value))
 
-					return false;
+					return false ;
 
 				}
+                if( value < 0 ){
+                    return false ;
+                }
 				return true;
 			});
     	}

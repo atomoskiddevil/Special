@@ -118,7 +118,7 @@
                 sum = sides[i]+sum ;
             }
             var max = Math.max.apply(Math,sides) ;
-            if(sum - max >= max){
+            if(sum - max > max){
                 return true;
             }
             else{

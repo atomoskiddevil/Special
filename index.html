@@ -91,12 +91,13 @@
                 if(longest == Math.sqrt(Math.pow(sides[0],2)+Math.pow(sides[1],2))) {
                     resultText = "Right triangle" ;                
                 }
-                else if(side1 == side2){
-                    resultText = "Equilateral triangle" ;
-                }
                 else if( side1 == side2 || side2 == side3 || side3 == side1){
                     resultText = "Isosceles triangle" ;
                 }
+                else if(side1 == side2){
+                    resultText = "Equilateral triangle" ;
+                }
+
                 else{
                     resultText = "Scalene triangle" ;
                 }
